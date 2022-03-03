@@ -1,10 +1,11 @@
 package ru.netology.service;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.testng.annotations.Test;
 
-class CashbackHackServiceTest {
+import static org.testng.Assert.*;
+
+public class CashbackHackServiceTest {
 
     CashbackHackService service = new CashbackHackService();
 
@@ -13,15 +14,15 @@ class CashbackHackServiceTest {
         int purchaseCost = 600;
         int actualResult = service.remain(purchaseCost);
         int expectedResult = 400;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void shouldhowHigherBoundary(){
+    public void shouldhowHigherBoundary() {
         int purchaseCost = 1300;
         int actualResult = service.remain(purchaseCost);
         int expectedResult = 700;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -29,7 +30,7 @@ class CashbackHackServiceTest {
         int purchaseCost = 0;
         int actualResult = service.remain(purchaseCost);
         int expectedResult = 1000;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -37,7 +38,7 @@ class CashbackHackServiceTest {
         int purchaseCost = 1000;
         int actualResult = service.remain(purchaseCost);
         int expectedResult = 1000;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
 
